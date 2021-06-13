@@ -11,3 +11,97 @@
     box-sizing: border-box;
     font-family: 'Source sans Pro', sans-serif;
 }
+
+body{
+    background-color: #f3f3f3;
+}
+
+.container,
+.container-footer{
+    display: grid;
+    margin: 20px auto;
+    grid-template-rows: repeat (4,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    max-width: 1024px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.container .cabezera{
+    width: 100%;
+    height: 450px;
+    max-height: 250px;
+    display: grid;
+    grid-column: 1/4;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* Photo profile box*/
+.container .cabezera .photo-profile{
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Photo profile box*/
+.container .cabezera .photo-profile .img-profile{
+    width: 50%;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .cabezera .photo-profile .img-profile #photo{
+    width: 25%;
+    border-radius: 25px;
+}
+
+/* Description profile*/
+.container .cabezera .photo-profile .text-description{
+    text-align: center;
+}
+
+.container .cabezera .photo-profile .text-description .name{
+    font-size: 19px;
+    color: #2b2b2b;
+}
+
+.container .cabezera .photo-profile .text-description .country{
+    font-size: 12px;
+    color: #5f5959;
+}
+
+
+/* Data profile */
+
+.container .cabezera .data-profile{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    place-content: center;
+    padding: 5px;
+    grid-gap: 25px;
+    margin-top: 10px;
+}
+
+.container .cabezera .data-profile .post,
+.container .cabezera .data-profile .followers,
+.container .cabezera .data-profile .following{
+    border: 1px solid #E5E5E5;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #E5E5E5;
+}
+
+.container .cabezera .data-profile .post .name-post,
+.container .cabezera .data-profile .followers .name-post,
+.container .cabezera .data-profile .following .name-post{
+    color: #BDBDBD;
+    text-transform: uppercase;
+    font-size: 12px;
+}
